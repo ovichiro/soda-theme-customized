@@ -22,7 +22,9 @@ Place `Theme - Soda` folder in `{SUBLIME_CONFIG_FOLDER}/Packages/User/`
 Linux example path: `~/.config/sublime-text-3/Packages/User/`  
 MacOS example path: `/Users/{USER_NAME}/Library/Application Support/Sublime Text 3/Packages/User/`  
 
-### Attribution
+### License and attribution
+
+Licensed under the [Creative Commons Attribution-ShareAlike 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/).
 
 Based on FileIcons by braver.  
 Based on Soda Theme by Ian Hill (http://buymeasoda.com/)  
