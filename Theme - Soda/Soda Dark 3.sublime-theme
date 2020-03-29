@@ -1,0 +1,378 @@
+// Soda Theme
+// Place in ~/.config/sublime-text-3/Packages/User/Theme - Soda/Soda Dark 3.sublime-theme
+
+[
+    // Tabs
+    {
+        "class": "tab_label",
+        "font.size": 12
+    },
+    {
+        "class": "tabset_control",
+        "tab_height": 30
+    },
+    {
+        "class": "tabset_control",
+        "settings": ["soda_classic_tabs"],
+        "tab_overlap": 15
+    },
+    {
+        "class": "scroll_tabs_left_button",
+        "settings": ["!soda_show_tabbar_scroll_buttons"],
+        "content_margin": [0, 0]
+    },
+    {
+        "class": "scroll_tabs_right_button",
+        "settings": ["!soda_show_tabbar_scroll_buttons"],
+        "content_margin": [0, 0]
+    },
+
+    // Status bar and label
+    {
+        "class": "status_bar",
+        "content_margin": [8, 1, 0, 1]
+    },
+    {
+        "class": "label_control",
+        "parents": [{"class": "status_bar"}],
+        // "color": [73, 81, 127],
+        "font.size": 13,
+    },
+
+    // Sidebar
+    {
+        "class": "sidebar_tree",
+        "row_padding": [12, 3, 4, 3],
+        "indent": 13,
+        "indent_offset": 13,
+        "indent_top_level": false,
+        "spacer_rows": true
+    },
+    {
+        "class": "sidebar_heading",
+        "font.bold": true,
+        "font.size": 13
+    },
+    {
+        "class": "sidebar_label",
+        "font.bold": false,
+        "font.size": 13
+    },
+    // Sidebar rows
+    // Add row tints instead of textures
+    {
+        "class": "tree_row",
+        "settings": ["soda_blend_sidebar_row"],
+        "attributes": ["!hover"],
+        "layer0.opacity": 0.0,
+    },
+    {
+        "class": "tree_row",
+        "settings": ["soda_blend_sidebar_row"],
+        "attributes": ["selectable", "hover"],
+        "layer0.tint": [199, 203, 209],
+        "layer0.opacity": 0.5,
+    },
+    {
+        "class": "tree_row",
+        "settings": ["soda_blend_sidebar_row"],
+        "attributes": ["selected"],
+        "layer0.tint": [199, 203, 209],
+        "layer0.opacity": 1.0,
+    },
+    // Sidebar file type icons
+    {
+        "class": "icon_file_type",
+        "layer0.tint": [255, 255, 255],
+        "layer0.opacity": 0.85,
+        "content_margin": [8, 8]
+    },
+    {
+        "class": "icon_file_type",
+        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "layer0.opacity": 1.0
+    },
+
+    // Quick panel
+    // Spacing and font size more like in the default theme
+    {
+        "class": "quick_panel",
+        "row_padding": 6
+    },
+    {
+        "class": "quick_panel_label",
+        "parents": [{"class": "mini_quick_panel_row"}],
+        "font.size": 13
+    },
+
+    // Auto-complete popup colors
+    // Make popups blend in with color schemes. This is similar to the Default theme behavior.
+    {
+        "class": "auto_complete",
+        "settings": ["soda_blend_auto_complete"],
+        "row_padding": [4, 1, 4, 1],
+        "tint_index": 0,
+        "layer0.opacity": 1.0,
+        "tint_modifier": [255, 255, 255, 0.05],
+    },
+    {
+        "class": "auto_complete",
+        "settings": ["soda_blend_auto_complete"],
+        "attributes": ["file_light"],
+        "tint_modifier": [0, 0, 0, 0.05],
+    },
+    {
+        "class": "popup_control",
+        "settings": ["soda_blend_auto_complete"],
+        "content_margin": [0, 0],
+        "layer0.tint": [255, 255, 255],
+        "layer0.opacity": 1.0
+    },
+    {
+        "class": "auto_complete_label",
+        "settings": ["soda_blend_auto_complete"],
+        "fg": [255, 255, 255, 0.0],
+        "match_fg": [255, 255, 255, 0.6],
+        "selected_fg": [255, 255, 255, 0.4],
+        "selected_match_fg": [255, 255, 255, 0.6],
+        "fg_blend": true
+    },
+    {
+        "class": "auto_complete_label",
+        "settings": ["soda_blend_auto_complete"],
+        "parents": [{"class": "auto_complete", "attributes": ["file_light"]}],
+        "fg": [0, 0, 0, 0.0],
+        "match_fg": [0, 0, 0, 0.3],
+        "selected_fg": [255, 255, 255, 0.7],
+        "selected_match_fg": [255, 255, 255],
+        "fg_blend": true
+    },
+    // Selection-row with variable tint instead of a dark texture, like the Default theme
+    // The following auto_complete_label values will override the ones above.
+    {
+        "class": "table_row",
+        "settings": ["soda_blend_auto_complete_row"],
+        "layer0.tint": [255, 255, 255],
+        "layer0.texture": "",
+        "layer0.opacity": 0.0
+    },
+    {
+        "class": "table_row",
+        "settings": ["soda_blend_auto_complete_row"],
+        "parents": [{"class": "auto_complete", "attributes": ["file_light"]}],
+        "layer0.tint": [0, 0, 0],
+        "layer0.opacity": 0.0
+    },
+    {
+        "class": "table_row",
+        "settings": ["soda_blend_auto_complete_row"],
+        "attributes": ["selected"],
+        "layer0.opacity": 0.2
+    },
+    {
+        "class": "table_row",
+        "settings": ["soda_blend_auto_complete_row"],
+        "parents": [{"class": "auto_complete", "attributes": ["file_light"]}],
+        "attributes": ["selected"],
+        "layer0.opacity": 0.15
+    },
+    {
+        "class": "auto_complete_label",
+        "settings": ["soda_blend_auto_complete_row"],
+        "fg": [255, 255, 255, 0.0],
+        "match_fg": [255, 255, 255, 0.6],
+        "selected_fg": [255, 255, 255, 0.0],
+        "selected_match_fg": [255, 255, 255, 0.6],
+        "fg_blend": true
+    },
+    {
+        "class": "auto_complete_label",
+        "settings": ["soda_blend_auto_complete_row"],
+        "parents": [{"class": "auto_complete", "attributes": ["file_light"]}],
+        "fg": [0, 0, 0, 0.0],
+        "match_fg": [0, 0, 0, 0.3],
+        "selected_fg": [0, 0, 0, 0.0],
+        "selected_match_fg": [0, 0, 0, 0.3],
+        "fg_blend": true
+    },
+
+    // Scroll Bars
+    // Make styling similar with the Default theme
+    {
+        "class": "scroll_area_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "sidebar_container"}],
+        "content_margin": [0, 10, 0, 10]
+    },
+    {
+        "class": "scroll_bar_control",
+        "settings": ["soda_blend_scrollbar"],
+        "layer0.texture": "",
+        "layer0.opacity": 1.0,
+        "content_margin": 4,
+        "tint_index": 0
+    },
+    {
+        "class": "scroll_bar_control",
+        "settings": ["soda_blend_scrollbar"],
+        "attributes": ["horizontal"],
+        "layer0.texture": "",
+    },
+    {
+        "class": "scroll_track_control",
+        "settings": ["soda_blend_scrollbar"],
+        "layer0.texture": "Theme - Default/common/light/scroll_bar.png",
+        "layer0.opacity": 1.0,
+        "layer0.inner_margin": 2,
+        "content_margin": [4, 4, 3, 4]
+    },
+    {
+        "class": "scroll_track_control",
+        "settings": ["soda_blend_scrollbar"],
+        "attributes": ["dark"],
+        "layer0.texture": "Theme - Default/common/dark/scroll_bar.png",
+    },
+    {
+        "class": "puck_control",
+        "settings": ["soda_blend_scrollbar"],
+        "layer0.texture": "Theme - Default/common/light/scroll_puck.png",
+        "layer0.opacity": 1.0,
+        "layer0.inner_margin": 2,
+        "content_margin": [0, 12]
+    },
+    {
+        "class": "puck_control",
+        "settings": ["soda_blend_scrollbar"],
+        "attributes": ["dark"],
+        "layer0.texture": "Theme - Default/common/dark/scroll_puck.png"
+    },
+    {
+        "class": "scroll_corner_control",
+        "settings": ["soda_blend_scrollbar"],
+        "layer0.texture": "",
+        "layer0.opacity": 1.0,
+        "tint_index": 0
+    },
+    // Scroll Bars (Horizontal)
+    {
+        "class": "scroll_track_control",
+        "settings": ["soda_blend_scrollbar"],
+        "attributes": ["horizontal"],
+        "layer0.texture": "Theme - Default/common/light/scroll_bar_horiz.png",
+        "content_margin": [4, 4, 4, 3]
+    },
+    {
+        "class": "scroll_track_control",
+        "settings": ["soda_blend_scrollbar"],
+        "attributes": ["horizontal", "dark"],
+        "layer0.texture": "Theme - Default/common/dark/scroll_bar_horiz.png",
+    },
+    {
+        "class": "puck_control",
+        "settings": ["soda_blend_scrollbar"],
+        "attributes": ["horizontal"],
+        "layer0.texture": "Theme - Default/common/light/scroll_puck_horiz.png",
+        "content_margin": [12, 0]
+    },
+    {
+        "class": "puck_control",
+        "settings": ["soda_blend_scrollbar"],
+        "attributes": ["horizontal", "dark"],
+        "layer0.texture": "Theme - Default/common/dark/scroll_puck_horiz.png",
+    },
+    // Scroll Bars (Sidebar)
+    {
+        "class": "scroll_bar_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "sidebar_container"}],
+        "layer0.opacity": 0.0,
+    },
+    {
+        "class": "scroll_bar_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "sidebar_container"}],
+        "attributes": ["horizontal"],
+    },
+    {
+        "class": "scroll_track_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "sidebar_container"}],
+        "layer0.texture": "Theme - Default/default/sidebar_scroll_bar.png",
+    },
+    {
+        "class": "puck_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "sidebar_container"}],
+        "layer0.texture": "Theme - Default/default/sidebar_scroll_puck.png",
+    },
+    {
+        "class": "scroll_corner_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "sidebar_container"}],
+        "layer0.opacity": 0.0,
+    },
+    {
+        "class": "scroll_track_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "sidebar_container"}],
+        "attributes": ["horizontal"],
+        "layer0.texture": "Theme - Default/default/sidebar_scroll_bar_horiz.png"
+    },
+    {
+        "class": "puck_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "sidebar_container"}],
+        "attributes": ["horizontal"],
+        "layer0.texture": "Theme - Default/default/sidebar_scroll_puck_horiz.png"
+    },
+    // Scroll Bars (Switch Project)
+    {
+        "class": "scroll_bar_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "switch_project_window"}],
+        "layer0.tint": [41, 41, 41],
+        "tint_index": 0
+    },
+    // Scroll Bars (Overlay)
+    {
+        "class": "scroll_bar_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "overlay_control"}],
+        "layer0.opacity": 0.0,
+        "content_margin": [4, 0, 0, 0]
+    },
+    {
+        "class": "scroll_track_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "overlay_control"}],
+        "layer0.texture": "Theme - Default/default/sidebar_scroll_bar.png",
+    },
+    {
+        "class": "puck_control",
+        "settings": ["soda_blend_scrollbar"],
+        "parents": [{"class": "overlay_control"}],
+        "layer0.texture": "Theme - Default/common/dark/scroll_puck.png",
+    },
+
+    // Mini map
+    // Use mini map from Default theme to better work with all color schemes
+    {
+        "class": "minimap_control",
+        "settings": ["always_show_minimap_viewport"],
+        "viewport_color": [128, 128, 128, 0.18],
+        "viewport_opacity": 1.0,
+    },
+    {
+        "class": "minimap_control",
+        "settings": ["!always_show_minimap_viewport"],
+        "viewport_color": [128, 128, 128, 0.25],
+        "viewport_opacity": { "target": 0.0, "speed": 4.0, "interpolation": "smoothstep" },
+    },
+    {
+        "class": "minimap_control",
+        "attributes": ["hover"],
+        "settings": ["!always_show_minimap_viewport"],
+        "viewport_color": [128, 128, 128, 0.25],
+        "viewport_opacity": { "target": 1.0, "speed": 20.0, "interpolation": "smoothstep" },
+    },
+]
