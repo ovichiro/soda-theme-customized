@@ -26,5 +26,5 @@ MacOS example path: `/Users/{USER_NAME}/Library/Application Support/Sublime Text
 
 Licensed under the [Creative Commons Attribution-ShareAlike 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/).
 
-Based on FileIcons by braver.  
-Based on Soda Theme by Ian Hill (http://buymeasoda.com/)  
+Based on FileIcons by braver, MIT license.  
+Based on Soda Theme by Ian Hill (http://buymeasoda.github.io/soda-theme/), CC BY-SA 3.0.
